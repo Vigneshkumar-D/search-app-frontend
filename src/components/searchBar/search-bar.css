@@ -1,0 +1,76 @@
+.search-app-main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    width: auto;
+}
+.search-app-main-container1{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #318CE7;
+}
+.search-app-sub-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    align-self: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 50%;
+}
+.form{
+    padding: .5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    align-self: center;
+}
+.search-input{
+    width: 50%;
+    margin-left: 15px;
+}
+.search-button{
+    margin-left: 15px;
+    font-family: 'Gill Sans', sans-serif;
+}
+.table-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* width: 80%; */
+}
+.err-message{
+    font-size: 15px;
+    font-family: 'Gill Sans', sans-serif;
+    color: rgb(231, 15, 15);
+    /* margin-top: 0px; */
+}
+.heading{
+    font-size: 28px;
+    margin: 0px;
+    padding-top: 20px;
+    color: #FFFFFF;
+    /* font-family: 'roboto'; */
+    font-family: 'Gill Sans', sans-serif;
+}
+.description{
+    font-size: 12px;
+    margin: 0px;
+    /* font-family: 'roboto'; */
+    font-family: 'Gill Sans', sans-serif;
+    /* padding-top: 20px; */
+    color: #FFFFFF;
+}
+
