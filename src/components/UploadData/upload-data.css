@@ -12,7 +12,7 @@
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     background-color: #318CE7;
 }
 .upload-form{
@@ -50,6 +50,9 @@
     font-family: 'Gill Sans', sans-serif;
     /* padding-top: 20px; */
     color: #FFFFFF;
+}
+.upload-data-btn-upload{
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 767px) {

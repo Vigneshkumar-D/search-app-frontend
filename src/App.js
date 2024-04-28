@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Router basename="/user" >
+      <Router>
         <Routes>
           <Route path="/" element={<SearchBar />} />
           <Route path="/upload" element={<UploadData />} />

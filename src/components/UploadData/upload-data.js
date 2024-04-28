@@ -3,6 +3,7 @@ import { Upload, Button, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import './upload-data.css'
 import '../searchBar/search-bar.css'
+import { Link } from "react-router-dom";
 
 
 function UploadData() {
@@ -44,6 +45,11 @@ function UploadData() {
           <h2 className="upload-heading">DataSearch Pro</h2>
           <p className="upload-description">Your Comprehensive Data Search App</p>
         </div>
+        <Link to="/"> 
+            <Button className="upload-data-btn-upload">
+              Home
+            </Button>
+          </Link>
       </div>
       <div className="sub-con">
         <form className="upload-form" onSubmit={handleSubmit}>
@@ -60,6 +66,7 @@ function UploadData() {
               Save
             </Button>
         </form>
+          
         </div>
     </div>
   );

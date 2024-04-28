@@ -2,6 +2,7 @@ import React, {useState } from "react";
 import { Table, Input, Button, Spin, Select, Space, message} from "antd";
 import "./search-bar.css";
 import {BsSearch} from 'react-icons/bs'
+import { Link } from "react-router-dom";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -85,30 +86,28 @@ function SearchBar() {
   return (
     <div className="search-app-main-container">
         <div  className="search-app-main-container1">
-            <div>
+            <div className="title-con">
                 <h2 className="heading">DataSearch Pro</h2>
                 <p className="description">Your Comprehensive Data Search App</p>
             </div>
             <div className="search-app-sub-container">
-                <form className="form" onSubmit={handleSubmit}>
-                <Space
-                    style={{
-                    //   width: "15%",
-                    }}
-                    direction="horizontal"
-                >
-                    {/* <Tag style={{background: 'transparent', border: 'none'}}>Search By:</Tag> */}
-                    <Select
-                    allowClear
-                    style={{
-                        minWidth: "100%",
-                    }}
-                    placeholder="Search By"
+              <form className="form" onSubmit={handleSubmit}>
+                  <div className="form-sub-con">
+                    <Space
+                      direction="horizontal"
+                      >
+                        {/* <Tag style={{background: 'transparent', border: 'none'}}>Search By:</Tag> */}
+                        <Select
+                        allowClear
+                        style={{
+                            minWidth: "100%",
+                        }}
+                        placeholder="Search By"
 
-                    onChange={handleChange}
-                    options={options}
-                    />
-                </Space>
+                        onChange={handleChange}
+                        options={options}
+                        />
+                    </Space>
                 <Input
                     type="text"
                     className="search-input"
@@ -119,7 +118,13 @@ function SearchBar() {
                 <Button className="search-button" htmlType="submit">
                   <BsSearch className="search-icon" />
                 </Button>
-                </form>    
+                  </div>
+                <Link to="/upload"> 
+                  <Button className="upload-data-btn">
+                    Upload data
+                  </Button>
+                </Link>
+              </form>    
             </div>
         </div>
         {showErrMsg && <p className="err-message">Please select any one option!</p>}
