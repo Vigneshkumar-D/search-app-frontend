@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Project Documentation: Data Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Data Search Application is a web-based platform designed to facilitate searching and uploading user data. It allows users to search for specific user data based on various parameters such as name, age, email, country, or mobile number. Additionally, it provides functionality for uploading data files containing user information.
 
-## Available Scripts
+## Features
+1. **Search Functionality**:
+   - Users can search for user data by entering specific parameters such as name, age, email, country, or mobile number.
+   - The search results are displayed in a tabular format, providing comprehensive information about the users that match the search criteria.
 
-In the project directory, you can run:
+2. **Upload Functionality**:
+   - Users can upload data files containing user information using the application.
+   - Supported file formats include CSV, Excel, or any other compatible format.
+   - Upon successful upload, the data is processed and stored in the backend database for future retrieval and analysis.
 
-### `npm start`
+3. **User-Friendly Interface**:
+   - The application features a clean and intuitive user interface, making it easy for users to navigate and interact with the platform.
+   - Various UI components such as buttons, forms, and tables are utilized to enhance user experience and facilitate smooth interaction.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **Error Handling**:
+   - The application includes robust error handling mechanisms to handle unexpected scenarios gracefully.
+   - Errors related to data search, file upload, or backend communication are displayed to users in a clear and informative manner, guiding them on how to proceed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+### Frontend
+- React.js: A JavaScript library for building user interfaces.
+- Ant Design: A React UI library with a set of high-quality components and themes.
+- React Router: A routing library for React applications, enabling navigation between different components/pages.
 
-### `npm test`
+### Backend
+- Spring Boot: A Java-based framework for building robust and scalable web applications.
+- Hibernate: An object-relational mapping (ORM) tool for Java applications, used for database interaction.
+- Spring Data JPA: A part of the Spring Data project that makes it easy to implement JPA-based repositories.
+- PostgreSQL: A relational database management system used for storing user data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Other Tools and Libraries
+- Fetch API: A modern browser-based API for making HTTP requests from the frontend to the backend.
+- FormData: An object used to construct key/value pairs that represent form fields and their values, which can be easily sent in HTTP requests.
+- ESLint: A static code analysis tool for identifying problematic patterns in JavaScript code.
 
-### `npm run build`
+## Development Environment
+- Visual Studio Code (VS Code) and IntelliJ IDEA are used for development.
+- Git version control system is used for managing source code changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Paths
+Two paths are added to the application:
+- `/user-details`: This path is used for data retrieval.
+- `/user-details/upload`: This path is used for uploading data. (Only word documents)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setting Up the Frontend
+1. **Clone the Repository**:
+   - Clone the frontend repository of the Data Search Application from the version control system (e.g., GitHub) to your local machine using Git:
+     ```
+     git clone <repository_url>
+     ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Navigate to the Frontend Directory**:
+   - Open a terminal and change the directory to the frontend folder of the cloned repository:
+     ```
+     cd search-app
+     ```
 
-### `npm run eject`
+3. **Install Dependencies**:
+   - Install the required dependencies for the frontend using npm or yarn:
+     ```
+     npm install
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Configure Environment Variables**:
+   - Create a `.env` file in the root of the frontend directory.
+   - Define any necessary environment variables in the `.env` file, such as API endpoint URLs or authentication tokens.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Run the Development Server**:
+   - Start the development server to run the frontend application locally:
+     ```
+     npm start
+     ```
+   - The frontend application will be accessible in your browser at http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setting Up the Backend
+1. **Clone the Repository**:
+   - Clone the backend repository of the Data Search Application from the version control system (e.g., GitHub) to your local machine using Git:
+     ```
+     git clone <repository_url>
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Navigate to the Backend Directory**:
+   - Open a terminal and change the directory to the backend folder of the cloned repository:
+     ```
+     cd searchApp
+     ```
 
-## Learn More
+3. **Install Dependencies**:
+   - Install the required dependencies for the backend using Maven:
+     ```
+     mvn install
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Configure Database**:
+   - Set up a PostgreSQL or any other compatible database instance.
+   - Create a new database for the application and configure the database connection properties in the `application.properties` file located in the `src/main/resources` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Run the Application**:
+   - Start the backend application by running the main class or using Maven:
+     ```
+     mvn spring-boot:run
+     ```
+   - The backend application will start and listen for incoming requests on the configured port (usually port 8080 by default).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+The Data Search Application provides users with a powerful tool for searching and uploading user data, offering a seamless and intuitive user experience. With its robust features, modern technologies, and user-friendly interface, the application aims to streamline data management processes and empower users to make informed decisions based on data analysis and insights.
