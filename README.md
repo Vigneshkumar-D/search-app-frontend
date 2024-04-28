@@ -45,8 +45,8 @@ The Data Search Application is a web-based platform designed to facilitate searc
 
 ## Paths
 Two paths are added to the application:
-- `/user-details`: This path is used for data retrieval.
-- `/user-details/upload`: This path is used for uploading data. (Only word documents)
+- `/`: This path is used for data retrieval.
+- `/upload`: This path is used for uploading data. (Only word documents)
 
 ## Setting Up the Frontend
 1. **Clone the Repository**:
