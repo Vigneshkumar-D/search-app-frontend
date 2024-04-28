@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import { Table, Input, Button, Spin, Select, Space, message} from "antd";
 import "./search-bar.css";
+import {BsSearch} from 'react-icons/bs'
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -53,26 +54,31 @@ function SearchBar() {
       title: "Name",
       dataIndex: "name",
       key: "name",
+      width:"15%"
     },
     {
       title: "Age",
       dataIndex: "age",
       key: "age",
+      width:"10%"
     },
     {
       title: "Country",
       dataIndex: "country",
       key: "country",
+      width:"15%"
     },
     {
       title: "Mobile",
       dataIndex: "mobile",
       key: "mobile",
+      width:"15%"
     },
     {
       title: "Email",
       dataIndex: "email",
       key: "email",
+      width:"25%"
     },
   ];
 
@@ -111,7 +117,7 @@ function SearchBar() {
                     placeholder = {`Enter ${selectedQueryParam} to search`}
                 />
                 <Button className="search-button" htmlType="submit">
-                    Search
+                  <BsSearch className="search-icon" />
                 </Button>
                 </form>    
             </div>
@@ -122,7 +128,10 @@ function SearchBar() {
             <Spin style={{ alignSelf: "center" }} />
           ) : (
             <Table
-              style={{ alignSelf: "center", width: "80%" }}
+              className="table"
+              style={{ alignSelf: "center", width: "80%",'@media (max-width: 767px)': {
+                width: "100%",
+              }}}
               dataSource={dataSource}
               columns={columns}
             />

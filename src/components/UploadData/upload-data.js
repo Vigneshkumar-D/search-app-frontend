@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Upload, Button, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import './upload-data.css'
+import '../searchBar/search-bar.css'
+
 
 function UploadData() {
   const [file, setFile] = useState("");
@@ -39,8 +41,8 @@ function UploadData() {
     <div className="search-app-main-upload-container">
       <div className="search-app-main-upload-container1">
         <div>
-          <h2 className="heading">DataSearch Pro</h2>
-          <p className="description">Your Comprehensive Data Search App</p>
+          <h2 className="upload-heading">DataSearch Pro</h2>
+          <p className="upload-description">Your Comprehensive Data Search App</p>
         </div>
       </div>
       <div className="sub-con">
