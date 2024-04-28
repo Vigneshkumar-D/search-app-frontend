@@ -23,10 +23,12 @@ function UploadData() {
           body: formData,
         }
       );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+     
       const jsonData = await response.json();
+      if (!response.ok) {
+        message.error("Please upload the allowed format! (.txt, MS word .docx)");
+        return;
+      }
       message.success(jsonData.message);
     } catch (error) {
       message.error("Failed to upload file: Error occurred");

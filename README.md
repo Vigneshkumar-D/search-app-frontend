@@ -10,8 +10,9 @@ The Data Search Application is a web-based platform designed to facilitate searc
 
 2. **Upload Functionality**:
    - Users can upload data files containing user information using the application.
-   - Supported file formats include CSV, Excel, or any other compatible format.
+   - Supported file formats MS word docx format (eg: file.docx).
    - Upon successful upload, the data is processed and stored in the backend database for future retrieval and analysis.
+   - It will start reading from third line.
 
 3. **User-Friendly Interface**:
    - The application features a clean and intuitive user interface, making it easy for users to navigate and interact with the platform.
