@@ -106,7 +106,7 @@ Two paths are added to the application:
      ```
      mvn spring-boot:run
      ```
-   - The backend application will start and listen for incoming requests on the configured port (usually port 8080 by default).
+   - The backend application will start and listen for incoming requests on the configured port 4000 (default port 8080 by default).
 
 ## Conclusion
 The Data Search Application provides users with a powerful tool for searching and uploading user data, offering a seamless and intuitive user experience. With its robust features, modern technologies, and user-friendly interface, the application aims to streamline data management processes and empower users to make informed decisions based on data analysis and insights.
